@@ -11,7 +11,7 @@ RUN tar zxf libsodium-0.6.0.tar.gz && cd libsodium-0.6.0 && ./configure && make 
 
 # build stellard
 ADD . /stellard-src
-RUN cd /stellard-src && scons && npm install
+RUN cd /stellard-src && scons && scons install
 
 # setup data dir
 RUN mkdir -p /var/lib/stellard
